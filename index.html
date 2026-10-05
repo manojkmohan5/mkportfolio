@@ -3,55 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&gt; mm.ai</title>
-    <meta name="description" content="Portfolio of Manojkumar Mohankumar, AI & Data, Software Engineer specializing in distributed backend systems.">
+    <title>&gt; mm.ai | Manojkumar Mohankumar, AI &amp; Data Software Engineer</title>
+    <meta name="description" content="Portfolio of Manojkumar Mohankumar, AI & Data, Software Engineer specializing in distributed backend systems and production GenAI applications.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23000'/><text x='4' y='22' font-family='monospace' font-weight='700' font-size='18' fill='%2339FF14'>&gt;_</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <noscript><style>.preloader { display: none; }</style></noscript>
+    <!-- Motion (the library formerly called Framer Motion), vanilla JS build. Defines window.Motion. -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@14.0.0/dist/motion.js" integrity="sha384-iRo3gRrhwD2dn+29qj2j9vUQCrD/MuD7J9d9bu+wslL4I2KswbiilPL8WV8Y/N/D" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
     <!-- Matrix Rain Background -->
-    <canvas id="matrix-canvas"></canvas>
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
 
     <!-- Terminal Boot Preloader -->
-    <div id="preloader" class="preloader">
+    <div id="preloader" class="preloader" aria-hidden="true">
         <div class="boot-container">
             <div id="boot-text" class="boot-text"></div>
             <div class="cursor blink">&nbsp;</div>
         </div>
     </div>
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
         <div class="nav-container">
             <a href="#" class="logo">&gt; mm.ai<span class="cursor">&nbsp;</span></a>
             <div class="nav-links">
                 <a href="#experience">~/experience</a>
                 <a href="#projects">~/projects</a>
                 <a href="#skills">~/skills</a>
+                <a href="#education">~/education</a>
                 <a href="#publications">~/publications</a>
             </div>
-            <a href="https://drive.google.com/file/d/1RwTwxM6jNBfxSRCpWoOTrUIyYEXpVZUa/view?usp=sharing" target="_blank" class="nav-cta">wget resume.pdf</a>
+            <div class="nav-actions">
+                <button type="button" id="fx-toggle" class="fx-toggle" aria-pressed="false" aria-label="Pause animations" title="Pause animations">
+                    <svg class="icon-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3" y="2" width="3.5" height="12"/><rect x="9.5" y="2" width="3.5" height="12"/></svg>
+                    <svg class="icon-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 2l10 6-10 6z"/></svg>
+                </button>
+                <a href="https://drive.google.com/file/d/1jb6mPEXIC0Fsvs-G_YuF6TjW9hYaTZNO/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="nav-cta">wget resume.pdf</a>
+            </div>
         </div>
     </nav>
 
-    <main>
+    <main id="main">
         <!-- Home / Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-glow"></div>
+            <div class="hero-glow" aria-hidden="true"></div>
             <div class="hero-content">
-                <h1 class="hero-title fade-in-up">Engineering Data & AI Systems<br> at Scale.</h1>
-                <p class="hero-subtitle fade-in-up" style="animation-delay: 0.1s;">
-                    Hi, I'm <strong>Manojkumar Mohankumar</strong>. <b>AI & Data, Software Engineer</b> building distributed backend systems, AI-powered applications, and enterprise data pipelines. Currently pursuing an MS in Information Management at UIUC.
+                <h1 class="hero-title">Engineering Data &amp; AI Systems<br> at Scale.</h1>
+                <p class="hero-subtitle">
+                    Hi, I'm <strong>Manojkumar Mohankumar</strong>. <b>AI &amp; Data, Software Engineer</b> building distributed backend systems, AI-powered applications, and enterprise data pipelines. Currently pursuing an MS in Information Management at UIUC and building <strong>uiuc.chat</strong> as an AI Developer Intern at Gies.
                 </p>
-                <div class="hero-actions fade-in-up" style="animation-delay: 0.2s;">
+                <div class="hero-actions">
                     <a href="mailto:mm240@illinois.edu" class="btn btn-primary">ping mm240@illinois.edu</a>
-                    <a href="https://github.com/manojkmohan5" target="_blank" class="btn btn-secondary">curl github</a>
+                    <a href="https://github.com/manojkmohan5" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">curl github</a>
                 </div>
-                
-                <div class="hero-links fade-in-up" style="animation-delay: 0.3s;">
-                    <a href="https://linkedin.com/in/manojkmohan5" target="_blank">LinkedIn</a> •
-                    <a href="https://manojkmohan5.github.io/mkportfolio" target="_blank">Portfolio</a> •
+
+                <div class="hero-links">
+                    <a href="https://linkedin.com/in/manojkmohan5" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
+                    <a href="https://manojkmohan5.github.io/mkportfolio" target="_blank" rel="noopener noreferrer">Portfolio</a> •
                     <a href="tel:+12178410214">+1 (217) 841-0214</a>
                 </div>
             </div>
@@ -60,10 +75,10 @@
         <!-- Deployment Showcase Section -->
         <section id="deployment" class="section" style="padding-top: 0;">
             <div class="container">
-                <div class="terminal-container fade-in-up" style="animation-delay: 0.5s;">
+                <div class="terminal-container">
                     <div class="terminal-window">
                         <div class="terminal-header">
-                            <div class="terminal-dots">
+                            <div class="terminal-dots" aria-hidden="true">
                                 <span class="dot close"></span>
                                 <span class="dot minimize"></span>
                                 <span class="dot maximize"></span>
@@ -77,12 +92,14 @@
                             <div class="term-line">&nbsp;</div>
                             <div class="term-line term-success">[ Identity ]</div>
                             <div class="term-line"><span class="term-muted">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> Manojkumar Mohankumar</div>
-                            <div class="term-line"><span class="term-muted">Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> AI & Data, Software Engineer</div>
-                            <div class="term-line"><span class="term-muted">Specialty :</span> Distributed Backend Systems, LLMs & Pipelines</div>
+                            <div class="term-line"><span class="term-muted">Role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> AI &amp; Data, Software Engineer</div>
+                            <div class="term-line"><span class="term-muted">Current&nbsp;&nbsp;&nbsp;:</span> AI Developer Intern @ Gies Innovation &amp; Transformation</div>
+                            <div class="term-line"><span class="term-muted">Specialty :</span> Distributed Backend Systems, LLMs &amp; Pipelines</div>
                             <div class="term-line">&nbsp;</div>
                             <div class="term-line term-success">[ Specs ]</div>
-                            <div class="term-line"><span class="term-muted">Education :</span> MS in Information Management @ UIUC</div>
+                            <div class="term-line"><span class="term-muted">Education :</span> MS in Information Management @ UIUC (GPA 4.0/4.0)</div>
                             <div class="term-line"><span class="term-muted">Experience:</span> Built high-availability architecture @ Kyndryl</div>
+                            <div class="term-line"><span class="term-muted">Certified&nbsp;:</span> AWS Cloud Practitioner · Google ACE · PL-300</div>
                             <div class="term-line"><span class="term-muted">Status&nbsp;&nbsp;&nbsp;&nbsp;:</span> <span class="term-success">Actively seeking engineering opportunities</span></div>
                             <div class="term-line">&nbsp;</div>
                             <div class="term-line term-muted">System running optimally. Ready for connections.</div>
@@ -93,6 +110,18 @@
             </div>
         </section>
 
+        <!-- Highlights -->
+        <section class="stats" aria-label="Highlights">
+            <div class="container">
+                <ul class="stats-grid">
+                    <li class="stat"><span class="stat-value" data-count="10000" data-suffix="+">10,000+</span><span class="stat-label">students &amp; faculty served by uiuc.chat</span></li>
+                    <li class="stat"><span class="stat-value" data-count="85" data-suffix="%">85%</span><span class="stat-label">lower multi-agent response latency</span></li>
+                    <li class="stat"><span class="stat-value" data-count="1000" data-suffix="+">1,000+</span><span class="stat-label">production batch jobs run daily</span></li>
+                    <li class="stat"><span class="stat-value" data-count="4.0">4.0</span><span class="stat-label">GPA, MS at UIUC</span></li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Experience -->
         <section id="experience" class="section">
             <div class="container">
@@ -100,38 +129,75 @@
                     <h2>Professional Experience</h2>
                     <p>Executing reliable, high-performance processes for Fortune 500 nodes.</p>
                 </div>
-                
-                <div class="experience-grid">
-                    <div class="card experience-card">
-                        <div class="card-icon">01</div>
-                        <h3>Systems Analyst / Engineer</h3>
-                        <p class="company">Kyndryl Solutions Pvt Ltd • 2023 – 2025</p>
-                        <ul class="card-list">
-                            <li>Built distributed batch processing systems handling 1,000+ daily workloads with high availability.</li>
-                            <li>Automated data validation and anomaly detection via AIOps, reducing inconsistencies by 35%.</li>
-                            <li>Served as focal lead for the Wesco account, mentoring 6+ engineers and managing operational analytics.</li>
-                        </ul>
+
+                <div class="timeline">
+                    <div class="timeline-track" aria-hidden="true"><div class="timeline-progress"></div></div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-node" aria-hidden="true"></span>
+                        <div class="card experience-card">
+                            <div class="card-icon">01</div>
+                            <h3>AI Developer Intern</h3>
+                            <p class="company">Gies Innovation &amp; Transformation • Champaign, IL • May 2026 – Present</p>
+                            <ul class="card-list">
+                                <li>Founding engineer for uiuc.chat, an AI assistant for 10,000+ students and faculty; built the Next.js frontend and FastAPI backend.</li>
+                                <li>Built a Qdrant-based RAG pipeline with hybrid search, live web retrieval, Dockerized services, and intelligent caching, improving answer relevance by 40%, reducing API costs by 66%, and achieving sub-second latency.</li>
+                                <li>Fine-tuned Kimi K2.6 using SFT + QLoRA on personalized teaching traces, evaluated responses with LLM-as-a-Judge, distilled pedagogical reasoning into Qwen models, and optimized high-throughput inference with vLLM.</li>
+                                <li>Optimized multi-agent inference, routing, and tool calling with intelligent caching and batching, reducing response latency by 85%.</li>
+                                <li>Integrated Model Context Protocol (MCP) servers and external tools, enabling AI agents to securely retrieve, reason over, and act on university resources.</li>
+                            </ul>
+                            <ul class="tech-chips"><li>Next.js</li><li>FastAPI</li><li>Qdrant</li><li>vLLM</li><li>QLoRA</li><li>MCP</li><li>Docker</li></ul>
+                        </div>
                     </div>
 
-                    <div class="card experience-card">
-                        <div class="card-icon">02</div>
-                        <h3>Data Science Intern</h3>
-                        <p class="company">Exposys Data Labs • Nov – Dec 2021</p>
-                        <ul class="card-list">
-                            <li>Developed a K-Means clustering model for customer segmentation with 90%+ stability.</li>
-                            <li>Performed feature engineering on time-series data to improve clustering and decision making.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <span class="timeline-node" aria-hidden="true"></span>
+                        <div class="card experience-card">
+                            <div class="card-icon">02</div>
+                            <h3>Mainframe Systems Engineer</h3>
+                            <p class="company">Kyndryl Solutions Pvt Ltd • 2023 – 2025 • Chennai, India</p>
+                            <ul class="card-list">
+                                <li>Built distributed batch processing systems handling 1,000+ daily workloads with high availability.</li>
+                                <li>Automated data validation and anomaly detection via AIOps, reducing inconsistencies by 35%.</li>
+                                <li>Served as focal lead for the Wesco account, mentoring 6+ engineers and managing operational analytics.</li>
+                                <li>Built Python automation for job orchestration, failure detection, recovery, and SLA monitoring, reducing manual intervention by 25%.</li>
+                                <li>Reduced MTTR by 18% by mining Azure Data Lake Storage logs with Python and SQL, reporting through dashboards that drove pre-check automation and disaster-recovery workflows.</li>
+                                <li>Integrated backend batch workflows with CI/CD pipelines for reliable execution, dependency management, and deployments.</li>
+                                <li>Implemented fault-tolerant, high-availability configurations with strict SLA adherence for Fortune 500 enterprise clients.</li>
+                            </ul>
+                            <ul class="tech-chips"><li>Python</li><li>SQL</li><li>JCL</li><li>CI/CD</li><li>Azure Data Lake</li><li>AIOps</li></ul>
+                        </div>
                     </div>
 
-                    <div class="card experience-card">
-                        <div class="card-icon">03</div>
-                        <h3>Web Development Intern</h3>
-                        <p class="company">The Sparks Foundation • May – Jun 2021</p>
-                        <ul class="card-list">
-                            <li>Built a full-stack donation platform with payment integration and automated workflows.</li>
-                            <li>Developed REST APIs and responsive UI using React, improving mobile usability.</li>
-                            <li>Collaborated with 3 developers using pair programming; achieved 98% unit test coverage.</li>
-                        </ul>
+                    <div class="timeline-item">
+                        <span class="timeline-node" aria-hidden="true"></span>
+                        <div class="card experience-card">
+                            <div class="card-icon">03</div>
+                            <h3>Data Science Intern</h3>
+                            <p class="company">Exposys Data Labs • Nov – Dec 2021 • Bengaluru, India</p>
+                            <ul class="card-list">
+                                <li>Developed a K-Means clustering model for customer segmentation with 90%+ stability.</li>
+                                <li>Performed feature engineering on time-series data to improve clustering and decision making.</li>
+                                <li>Built PyTorch preprocessing pipelines for normalization, missing-value imputation, and noise reduction; validated clusters with the Elbow Method and a 0.78 Silhouette Score.</li>
+                                <li>Evaluated model robustness through sensitivity analysis, improving interpretability of segmentation outputs.</li>
+                            </ul>
+                            <ul class="tech-chips"><li>Python</li><li>Scikit-learn</li><li>PyTorch</li><li>K-Means</li></ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-node" aria-hidden="true"></span>
+                        <div class="card experience-card">
+                            <div class="card-icon">04</div>
+                            <h3>Web Development Intern</h3>
+                            <p class="company">The Sparks Foundation • May – Jun 2021 • Remote</p>
+                            <ul class="card-list">
+                                <li>Built a full-stack donation platform with payment integration and automated workflows.</li>
+                                <li>Developed REST APIs and responsive UI using React, improving mobile usability.</li>
+                                <li>Collaborated with 3 developers using pair programming; achieved 98% unit test coverage.</li>
+                            </ul>
+                            <ul class="tech-chips"><li>React</li><li>REST APIs</li><li>Payments</li><li>Unit Testing</li></ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -144,26 +210,62 @@
                     <h2>Technical Projects</h2>
                     <p>Open-source repositories and ML modules.</p>
                 </div>
-                
+
                 <div class="projects-grid">
-                    <a href="https://github.com/manojkmohan5" target="_blank" class="card project-card">
-                        <h3>Semantic Caching Framework</h3>
-                        <p>Built a semantic caching system using embedding similarity search and vector storage, reducing LLM latency by 40%. Optimized AI performance with multi-turn context.</p>
-                    </a>
-                    
-                    <a href="https://github.com/manojkmohan5" target="_blank" class="card project-card">
-                        <h3>Agentic RAG Chatbot</h3>
-                        <p>Created an agentic RAG system with LangChain, vectors, and ReAct tool orchestration. Improved retrieval accuracy by 40% and reduced response time by 35%.</p>
-                    </a>
-                    
-                    <a href="https://github.com/manojkmohan5" target="_blank" class="card project-card">
-                        <h3>LLM Cyberbullying Detection</h3>
-                        <p>Built a classification pipeline on 47K+ samples with prompt engineering, HITL evaluation and A/B testing, improving macro-F1 by 18%.</p>
+                    <a href="https://github.com/manojkmohan5/AI-Prompt-Governance-and-Risk-Detection-Platform" target="_blank" rel="noopener noreferrer" class="card project-card featured">
+                        <div class="project-meta"><span>featured • AI governance</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
+                        <h3>AI Prompt Governance &amp; Risk Detection Platform</h3>
+                        <p>Built an AI governance platform that monitors 500+ LLM interactions through a Chrome extension, using a fine-tuned DistilBERT classifier for enterprise policy enforcement and NER-based PII detection. Engineered 10+ policy guardrails with automated evaluation and audit logging, plus explainable risk reports that cut manual security review effort by 60%.</p>
+                        <ul class="tech-chips"><li>DistilBERT</li><li>NER / PII Detection</li><li>Chrome Extension</li><li>Guardrails</li><li>Human-in-the-Loop</li></ul>
                     </a>
 
-                    <a href="https://github.com/manojkmohan5" target="_blank" class="card project-card">
+                    <a href="https://github.com/manojkmohan5/OmniBench" target="_blank" rel="noopener noreferrer" class="card project-card featured">
+                        <div class="project-meta"><span>featured • NL analytics</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
+                        <h3>OmniBench – NL Analytics over the Open-LLM Ecosystem</h3>
+                        <p>Built an AI copilot over 4,600 open LLMs and 27K benchmark evaluations that routes queries to text-to-SQL, RAG, or hybrid retrieval via LangGraph at 93% routing accuracy. A PostgreSQL + pgvector engine with HNSW indexing, SQLGlot-based query optimization, and hybrid search reaches 87% execution-match accuracy on 30 gold queries. The FastAPI and React dashboard shows generated queries, citations, and charts with Prometheus/Grafana observability, scoring 0.92 RAGAS faithfulness and 0.88 context precision at 2.4s p95 latency.</p>
+                        <ul class="tech-chips"><li>LangGraph</li><li>PostgreSQL + pgvector</li><li>SQLGlot</li><li>FastAPI</li><li>React</li><li>RAGAS</li></ul>
+                    </a>
+
+                    <a href="https://github.com/manojkmohan5/SalesGPT-AI-Chat-Agent-for-Sales-Pipeline-Analytics" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-meta"><span>AI copilot</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
+                        <h3>NexusAI – Enterprise AI Copilot &amp; Intelligence Platform</h3>
+                        <p>Built an AI copilot that combines RAG, text-to-SQL, and dynamic visualizations over 2,000+ CRM records. Query routing with LangChain, ChromaDB, and DuckDB, observability with Prometheus/Grafana, and React visualizations cut manual query time by 50%.</p>
+                        <ul class="tech-chips"><li>LangChain</li><li>ChromaDB</li><li>DuckDB</li><li>Text-to-SQL</li><li>Grafana</li><li>React</li></ul>
+                    </a>
+
+                    <a href="https://dl-venture-voice.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-meta"><span>Gies College of Business</span><span class="project-link">live <span aria-hidden="true">↗</span></span></div>
+                        <h3>VentureVoice – AI Interview Platform</h3>
+                        <p>Built a real-time conversational AI interview platform with ElevenLabs Conversational AI and Anam, supporting 600+ students across text, voice, and photorealistic video modes and cutting voice response latency by 40%. Next.js, TypeScript, Prisma, and gRPC power session management and instructor analytics, with custom AI personas and GPT-5.6 rubric-based feedback.</p>
+                        <ul class="tech-chips"><li>Next.js</li><li>TypeScript</li><li>Prisma</li><li>gRPC</li><li>ElevenLabs</li></ul>
+                    </a>
+
+                    <a href="https://github.com/manojkmohan5/Semantic-Caching-Framework-for-Context-Aware-Conversational-AI" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-meta"><span>Sep – Oct 2025</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
+                        <h3>Semantic Caching Framework</h3>
+                        <p>Built a semantic caching system using embedding similarity search and vector storage, reducing LLM latency by 40%. Optimized AI performance with multi-turn context.</p>
+                        <ul class="tech-chips"><li>Embeddings</li><li>Vector Storage</li><li>Similarity Search</li><li>Session Context</li></ul>
+                    </a>
+
+                    <a href="https://github.com/manojkmohan5/Agentic-AI-Chatbot" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-meta"><span>Sep – Dec 2025</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
+                        <h3>Agentic RAG Chatbot</h3>
+                        <p>Created an agentic RAG system with LangChain, vectors, and ReAct tool orchestration. Improved retrieval accuracy by 40% and reduced response time by 35%.</p>
+                        <ul class="tech-chips"><li>LangChain</li><li>Vector DB</li><li>ReAct</li><li>Tool Orchestration</li></ul>
+                    </a>
+
+                    <a href="https://github.com/manojkmohan5/LLM-Based-Cyberbullying-Detection-with-Human-in-the-Loop-Evaluation" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-meta"><span>Oct – Dec 2025</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
+                        <h3>LLM Cyberbullying Detection</h3>
+                        <p>Built a classification pipeline on 47K+ samples with prompt engineering, HITL evaluation and A/B testing, improving macro-F1 by 18%.</p>
+                        <ul class="tech-chips"><li>Prompt Engineering</li><li>SFT</li><li>HITL</li><li>A/B Testing</li></ul>
+                    </a>
+
+                    <a href="https://github.com/manojkmohan5" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-meta"><span>Data engineering</span><span class="project-link">github <span aria-hidden="true">↗</span></span></div>
                         <h3>EV Market Intelligence System</h3>
                         <p>Developed a Python star schema ETL pipeline feeding scalable Power BI multidimensional reporting, tracking EV adoption and reducing ad-hoc analyses by 50%.</p>
+                        <ul class="tech-chips"><li>Python</li><li>Star Schema</li><li>ETL</li><li>Power BI</li></ul>
                     </a>
                 </div>
             </div>
@@ -179,42 +281,129 @@
 
                 <div class="skills-container">
                     <div class="skill-category">
-                        <h3>Languages & Backend</h3>
+                        <h3>Languages &amp; Backend</h3>
                         <div class="skill-tags">
                             <span>Python</span><span>C/C++</span><span>JavaScript</span><span>SQL</span>
                             <span>REST APIs</span><span>Microservices</span><span>Distributed Systems</span><span>Django</span><span>FastAPI</span>
+                            <span>TypeScript</span><span>Kotlin</span><span>JCL</span><span>Flask</span><span>GraphQL</span><span>gRPC</span>
+                            <span>OOP</span><span>System Design</span><span>Concurrency &amp; Threading</span>
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
-                        <h3>AI & Machine Learning</h3>
+                        <h3>AI &amp; Machine Learning</h3>
                         <div class="skill-tags">
                             <span>LLMs</span><span>RAG</span><span>Vector DB</span><span>Langchain</span>
                             <span>Semantic Caching</span><span>Agentic AI</span><span>Ollama</span>
+                            <span>Prompt Engineering</span><span>LLM Fine-Tuning (SFT, QLoRA)</span><span>LLM Evaluation</span><span>LLM-as-a-Judge</span>
+                            <span>Sentence Transformers</span><span>vLLM</span><span>Model Context Protocol</span><span>LLMOps</span><span>MLflow</span><span>Qdrant</span>
+                            <span>LangGraph</span><span>pgvector</span><span>RAGAS</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3>Data Engineering & BI</h3>
+                        <h3>Data Engineering &amp; BI</h3>
                         <div class="skill-tags">
                             <span>Databricks</span><span>Spark</span><span>Airflow</span><span>Kafka</span>
                             <span>ETL</span><span>Power BI</span><span>Tableau</span><span>Dimensional Modeling</span>
+                            <span>PySpark</span><span>Data Warehousing</span>
                         </div>
                     </div>
 
                     <div class="skill-category">
-                        <h3>Cloud & DevOps</h3>
+                        <h3>Cloud &amp; DevOps</h3>
                         <div class="skill-tags">
-                            <span>AWS (Sagemaker, Bedrock, S3, EC2)</span><span>Docker</span>
+                            <span>AWS (SageMaker, Bedrock, S3, EC2, Textract, ElastiCache, Lambda)</span><span>Docker</span>
                             <span>Kubernetes</span><span>CI/CD</span><span>Git</span>
+                            <span>Azure (OpenAI, Blob Storage, Functions, AI Search)</span><span>Terraform</span><span>Bicep</span>
+                            <span>Prometheus</span><span>Grafana</span><span>Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <div class="skill-tags">
+                            <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Snowflake</span>
+                            <span>Redis</span><span>SQLAlchemy</span><span>Alembic</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Engineering Practices</h3>
+                        <div class="skill-tags">
+                            <span>SDLC</span><span>Agile</span><span>Unit Testing</span><span>Debugging</span>
+                            <span>Performance Optimization</span><span>Fault Tolerance</span><span>Observability</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Education & Certifications -->
+        <section id="education" class="section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Education</h2>
+                    <p>$ cat ~/education.log &amp;&amp; ls ~/certs</p>
+                </div>
+
+                <div class="edu-grid">
+                    <div class="card edu-card">
+                        <p class="edu-dates">Aug 2025 – May 2027 • Champaign, IL</p>
+                        <h3>University of Illinois Urbana-Champaign</h3>
+                        <p class="edu-degree">Master of Science in Information Management</p>
+                        <p class="edu-gpa">GPA <strong>4.0</strong> / 4.0</p>
+                        <p class="edu-course"><span>Coursework:</span> Data Warehousing &amp; Business Intelligence; Data, Statistics &amp; Information; Database Design &amp; Prototyping</p>
+                    </div>
+
+                    <div class="card edu-card">
+                        <p class="edu-dates">Aug 2019 – May 2023 • Chennai, India</p>
+                        <h3>Anna University</h3>
+                        <p class="edu-degree">Bachelor of Engineering in Computer Science and Engineering</p>
+                        <p class="edu-gpa">GPA <strong>3.5</strong> / 4.0</p>
+                        <p class="edu-course"><span>Coursework:</span> Data Structures &amp; Algorithms, Machine Learning Algorithms, Artificial Intelligence, Business Intelligence</p>
+                        <p class="edu-role">Teaching Assistant – Machine Learning Algorithms</p>
+                    </div>
+                </div>
+
+                <h3 class="subhead">Certifications</h3>
+                <ul class="cert-list">
+                    <li>
+                        <a class="cert-link" href="https://www.credly.com/badges/8abd780c-6e4d-4660-9535-e69f48226f50/linked_in_profile" target="_blank" rel="noopener noreferrer">
+                            <span><span class="cert-name">AWS Certified Cloud Practitioner</span><span class="cert-issuer">Amazon Web Services</span></span>
+                            <span class="cert-verify">verify <span aria-hidden="true">↗</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cert-link" href="https://learn.microsoft.com/api/credentials/share/en-us/ManojKumarM-6705/226F1CC2C5AE933B?sharingId=231B7DE71138DCD6" target="_blank" rel="noopener noreferrer">
+                            <span><span class="cert-name">Power BI Data Analyst Associate (PL-300)</span><span class="cert-issuer">Microsoft Certified</span></span>
+                            <span class="cert-verify">verify <span aria-hidden="true">↗</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cert-link" href="https://www.credly.com/badges/e33b41f6-3066-4c40-a64e-679072ec45d1/public_url" target="_blank" rel="noopener noreferrer">
+                            <span><span class="cert-name">Associate Cloud Engineer</span><span class="cert-issuer">Google Cloud</span></span>
+                            <span class="cert-verify">verify <span aria-hidden="true">↗</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cert-link" href="https://www.coursera.org/account/accomplishments/verify/Z7QL5NRP4XRJ" target="_blank" rel="noopener noreferrer">
+                            <span><span class="cert-name">Machine Learning</span><span class="cert-issuer">Stanford Online · Coursera</span></span>
+                            <span class="cert-verify">verify <span aria-hidden="true">↗</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cert-link" href="https://www.credly.com/badges/f2d037a8-eb34-408d-968e-89dee825b1b0/linked_in?t=sn5pdv" target="_blank" rel="noopener noreferrer">
+                            <span><span class="cert-name">Generative AI Essentials</span><span class="cert-issuer">AWS Partnered</span></span>
+                            <span class="cert-verify">verify <span aria-hidden="true">↗</span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <!-- Publications -->
-        <section id="publications" class="section alt-bg">
+        <section id="publications" class="section">
             <div class="container">
                 <div class="section-header">
                     <h2>Research Publications</h2>
@@ -226,21 +415,21 @@
                         <div class="pub-date">Dec 2025</div>
                         <div class="pub-details">
                             <h3>Adaptive ML Models for Real-Time Smart Grid Monitoring and Load Prediction</h3>
-                            <p class="pub-venue">IEEE</p>
+                            <p class="pub-venue"><a href="https://ieeexplore.ieee.org/document/11323544" target="_blank" rel="noopener noreferrer">IEEE <span aria-hidden="true">↗</span></a></p>
                         </div>
                     </div>
                     <div class="publication-item">
                         <div class="pub-date">Jul 2024</div>
                         <div class="pub-details">
                             <h3>Interference Mitigation Using SDN Based Next Generation Networks</h3>
-                            <p class="pub-venue">ICRACSIT</p>
+                            <p class="pub-venue"><a href="https://digitalxplore.org/" target="_blank" rel="noopener noreferrer">ICRACSIT <span aria-hidden="true">↗</span></a></p>
                         </div>
                     </div>
                     <div class="publication-item">
                         <div class="pub-date">Mar 2024</div>
                         <div class="pub-details">
                             <h3>Artificial Neural Network Based Classification of Network Traffic</h3>
-                            <p class="pub-venue">ICCSIT</p>
+                            <p class="pub-venue"><a href="https://digitalxplore.org/" target="_blank" rel="noopener noreferrer">ICCSIT <span aria-hidden="true">↗</span></a></p>
                         </div>
                     </div>
                 </div>
@@ -252,8 +441,9 @@
             <div class="container">
                 <h2 class="cta-title">Ready to build something robust?</h2>
                 <p>Feel free to reach out for collaborations or employment opportunities.</p>
-                <br>
-                <a href="mailto:mm240@illinois.edu" class="btn btn-primary">contact_me.sh</a>
+                <div class="cta-actions">
+                    <a href="mailto:mm240@illinois.edu" class="btn btn-primary">contact_me.sh</a>
+                </div>
             </div>
         </section>
     </main>
@@ -262,16 +452,14 @@
         <div class="footer-container">
             <div class="footer-left">
                 <strong>Manojkumar Mohankumar</strong>
-                <p>AI & Data, Software Engineer</p>
+                <p>AI &amp; Data, Software Engineer</p>
             </div>
             <div class="footer-right">
-                <a href="https://github.com/manojkmohan5" target="_blank">~/github</a>
-                <a href="https://linkedin.com/in/manojkmohan5" target="_blank">~/linkedin</a>
-                <a href="https://manojkmohan5.github.io/mkportfolio" target="_blank">~/portfolio</a>
+                <a href="https://github.com/manojkmohan5" target="_blank" rel="noopener noreferrer">~/github</a>
+                <a href="https://linkedin.com/in/manojkmohan5" target="_blank" rel="noopener noreferrer">~/linkedin</a>
+                <a href="https://manojkmohan5.github.io/mkportfolio" target="_blank" rel="noopener noreferrer">~/portfolio</a>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
